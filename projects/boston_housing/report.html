@@ -13655,7 +13655,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>  Maximum depth of 4 best generalizes unseen data, because it had the highest validation score</p>
+<p><strong>Answer: </strong>  Maximum depth of 4 best generalizes unseen data, because it had the highest validation score.  If we continue to increase our depth the validation score declines, therefore we know that this is a max validation score for this model.  If we continue to increase our model complexity our training scores increase, but when we go to use it on future data, we will never have as good performance with a max depth of 4.</p>
 
 </div>
 </div>
@@ -13678,7 +13678,7 @@ rkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Grid search is when you create a grid of parameters (such as kernel and function type) to test your model with different parameters.  We can use it to optimize a learning algorithm by selecting the most optimum parameters by selecting the parameters with the best F1 Score.</p>
+<p>Grid search is when you create a grid of parameters (such as kernel and function type) to test your model with different parameters.  We can use it to optimize a learning algorithm by selecting the most optimum parameters by selecting the parameters with the best F1 Score.  Grid search will try all combinations to try and select the best set of paramters for the given model and the specified parameter range.  Grid search can also use scores other than F1 Score, we can speficiy whatever performance metric we want Grid Search to use.</p>
 
 </div>
 </div>
@@ -13704,7 +13704,8 @@ rkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>K fold is when you break up your data into 'k' buckets.  We run 'k' model tests, each time testing a different bucket and then we average the results to compute our model scores.  The benefit is that we can use all of our data to train our model without compromising the validity of the testing.</p>
+<p>K fold is when you break up your data into 'k' buckets using your training data, randomly.  We run 'k' model tests, each time testing a different bucket and then we average the results to compute our model scores.  The benefit is that we can use more of our data in training our model without compromising the validity of the testing.</p>
+<p>The benefit to using 'k-fold' when using grid search to find our parameters is that we can create more sets of data by randomly scrambling and selecting testing and training data for our grid searches.  If we do not use k-fold we end up with bias when selecting our optimum parameters because we used the same data in each of our searches.</p>
 
 </div>
 </div>
@@ -13947,6 +13948,13 @@ Predicted selling price for Client 3&#39;s home: $941,500.00
 <p>Client 2's home: $216,183.33</p>
 <p>Client 3's home: $941,500.00</p>
 <p>I would expect that client 3's home would be worth more than client 1's home which would be worth more than client 2's home given their respective features.  Therefore, the predictions seem resonable.</p>
+<p>Also consider our statistics we calculated earlier:</p>
+<p>Minimum price: $105,000.00
+Maximum price: $1,024,800.00
+Mean price: $454,342.94
+Median price $438,900.00
+Standard deviation of prices: $165,171.13</p>
+<p>we can see that all of our recommended selling prices are greater than the minimum and less than the maximum.  Client 1's home, which we predict to be more than client 2's home and less than clients 3 home is close to our calculated mean.  Which means it is about an average home in this market, which intuitively we would guess by looking at Client 1's features.</p>
 
 </div>
 </div>
