@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11931,7 +11931,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -12027,7 +12027,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -12368,7 +12368,7 @@ UMKrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -12704,7 +12704,7 @@ SJIkSWrNAkKSJElSaxYQkiRJklqzgJAkSZLUmgWEJEmSpNYsICRJkiS1ZgEhSZIkqbX/Dw7mqWDp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -12917,7 +12917,7 @@ SJIkSWrNAkKSJElSaxYQkiRJklqzgJAkSZLUmgWEJEmSpNYsICRJkiS1ZgEhSZIkqbX/Dw7mqWDp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -12985,7 +12985,7 @@ SJIkSWrNAkKSJElSaxYQkiRJklqzgJAkSZLUmgWEJEmSpNYsICRJkiS1ZgEhSZIkqbX/Dw7mqWDp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13018,6 +13018,18 @@ SJIkSWrNAkKSJElSaxYQkiRJklqzgJAkSZLUmgWEJEmSpNYsICRJkiS1ZgEhSZIkqbX/Dw7mqWDp
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training set has 36177 samples.
 Testing set has 9045 samples.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\mistr\Anaconda2\lib\site-packages\sklearn\cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -13075,7 +13087,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
@@ -13097,7 +13109,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="n">tn</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">fn</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">pred</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
+<span class="c1">#pred = [1] * len(income)</span>
 <span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">tn</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span><span class="o">+</span><span class="n">fp</span><span class="o">+</span><span class="n">tn</span><span class="o">+</span><span class="n">fn</span><span class="p">)</span><span class="c1">#accuracy_score(income, pred)</span>
 <span class="n">recall</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span><span class="o">+</span><span class="n">fn</span><span class="p">)</span> <span class="c1">#recall_score(income,pred)</span>
 <span class="n">precision</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">tp</span><span class="o">+</span><span class="n">fp</span><span class="p">)</span> <span class="c1">#precision_score(income,pred)</span>
@@ -13183,14 +13195,14 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <h1 id="It-looks-like-you-gave-the-same-answers-for-both-of-these-models.-This-means-you-haven't-quite-dug-#deep-enough---there-are-very-particular-strengths-and-weaknesses-that-are-very-different-between-#boosting-and-bagging.-Which-one-is-better-at-handling-overfitting?-Which-one-is-more-susceptible-to-#noise-and-outliers?-Which-one-can-be-parellized-for-faster-speed?-There-are-lots-of-differences-#between-these-two-methods---try-and-identify-the-most-important-ones">It looks like you gave the same answers for both of these models. This means you haven't quite dug #deep enough - there are very particular strengths and weaknesses that are very different between #boosting and bagging. Which one is better at handling overfitting? Which one is more susceptible to #noise and outliers? Which one can be parellized for faster speed? There are lots of differences #between these two methods - try and identify the most important ones<a class="anchor-link" href="#It-looks-like-you-gave-the-same-answers-for-both-of-these-models.-This-means-you-haven't-quite-dug-#deep-enough---there-are-very-particular-strengths-and-weaknesses-that-are-very-different-between-#boosting-and-bagging.-Which-one-is-better-at-handling-overfitting?-Which-one-is-more-susceptible-to-#noise-and-outliers?-Which-one-can-be-parellized-for-faster-speed?-There-are-lots-of-differences-#between-these-two-methods---try-and-identify-the-most-important-ones">&#182;</a></h1><p>Boosting classifier</p>
 <ol>
 <li>used in netflix recommendations system</li>
-<li>great to combine multiple methods, such as when data have many features that can all affect the labels in their unique relationships.  Uses simple learners</li>
-<li>Not good at finding models which are easily explained and transparent.  This would not be good in a research environment where you would use ensemble to find an underlining relationship to explain to others</li>
+<li>great to combine multiple methods, such as when data have many features that can all affect the labels in their unique relationships.  Uses simple learners.  </li>
+<li>Not good at finding models which are easily explained and transparent.  This would not be good in a research environment where you would use ensemble to find an underlining relationship to explain to others.  Boosting would provide a more accurate model then bagging, at the expense of over-fitting if the model overfits with single learners, and a longer run-time.</li>
 <li>Our features may be independent of each other but each feature could add to the likliness the income is greater than 50k, therefore we may be able to find simple relationships between each feature and the label and add up those features to predict the label.</li>
 </ol>
 <p>Bagging classifier</p>
 <ol>
 <li>used in netflix recommendations system</li>
-<li>great to combine multiple methods, such as when data have many features that can all affect the labels in their unique relationships.  Uses simple learners</li>
+<li>great to combine multiple methods, such as when data have many features that can all affect the labels in their unique relationships.  Uses simple learners.  Bagging is good in cases where there is over-fitting with a single learner.  Bagging also trains learners in parralel and would have a lower run-time then boosting.</li>
 <li>Not good at finding models which are easily explained and transparent.  This would not be good in a research environment where you would use ensemble to find an underlining relationship to explain to others</li>
 <li>Our features may be independent of each other but each feature could potentially add to the likliness the income is greater than 50k, therefore we may be able to find simple relationships between each feature and the label and add up those features to predict the label.</li>
 </ol>
