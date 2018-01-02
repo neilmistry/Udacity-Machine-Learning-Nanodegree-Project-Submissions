@@ -24,8 +24,6 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
-        self.trial = 0
-
 
     def reset(self, destination=None, testing=False):
         """ The reset function is called at the beginning of each trial.
@@ -45,8 +43,7 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha = 0
         else:
-            self.epsilon = 1 - self.trial*0.001
-            self.trial +=1
+            self.epsilon = self.epsilon - 0.002
         return None
 
     def build_state(self):
@@ -127,8 +124,12 @@ class LearningAgent(Agent):
             if self.epsilon > random.random():
                 action = random.choice(self.valid_actions)
             else:
-                action = max(self.Q[state])
-       
+                maxq = self.get_maxQ(state)
+                maxqactions = []
+                for action, qvalue in self.Q[state].iteritems():
+                    if maxq == self.Q[state][action]:
+                        maxqactions.append(action)
+                action = random.choice(maxqactions)
         return action
 
 
@@ -142,8 +143,8 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-        
-        self.Q[state][action] = self.Q[state][action]*(1.0-self.alpha)+self.alpha*reward
+        if self.learning == True:  
+            self.Q[state][action] = self.Q[state][action]*(1.0-self.alpha)+self.alpha*reward
 
         return
 
@@ -202,7 +203,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=10)
+    sim.run(n_test=10, tolerance=0.05)
 
 
 if __name__ == '__main__':
